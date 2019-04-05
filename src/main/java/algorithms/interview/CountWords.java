@@ -45,10 +45,9 @@ public class CountWords {
                 // If next character is not a word separator
                 // and state is false, then set the state as IN
                 // and increment word count
-            else if (state == false) {
+            else if (!state) {
                 state = true;
                 wc++;
-                System.out.println(input.charAt(i));
             }
         }
         return wc;
