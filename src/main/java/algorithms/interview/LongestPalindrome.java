@@ -1,39 +1,45 @@
 package algorithms.interview;
 
-import algorithms.exercises.exercise03.Palindrome;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class LongestPalindrome {//TODO
 
     public static void main(String[] args) {
+        LongestPalindrome lp = new LongestPalindrome();
 
         String input = "itopinonavevanonipoti osso eleimettalattemieleeleimettalattemieleeleimettalattemieleeleimettalattemiele";
-        StringBuffer sb = new StringBuffer();
-        int maxSize = 0;
-        Map<String, Integer> mappa = new HashMap<>();
+
+        String longest = lp.getLongestPalindrome(input);
+
+        System.out.println(longest);
+        System.out.println(longest.length());
+
+    }
+
+    private String getLongestPalindrome(String input) {
+        String longest = String.valueOf(input.charAt(0));
+
         for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == ' ')
-                continue;
-            sb.append(input.charAt(i));
-            if (Palindrome.isPalindrome.apply(sb.toString())) {
-                System.out.println(sb.toString());
-                if (sb.length() > maxSize) {
-                    maxSize = sb.length();
-                    mappa.put(sb.toString(), maxSize);
-                    sb.delete(0, sb.length());
-                }
-                /*mappa.put(sb.toString(), maxSize);*/
+
+            String tmp = findPalindrome(input, i, i);
+
+            if (tmp.length() > longest.length()) {
+                longest = tmp;
+            }
+
+            tmp = findPalindrome(input, i, i + 1);
+            if (tmp.length() > longest.length()) {
+                longest = tmp;
             }
         }
-        String winner = null;
-        for (Map.Entry<String, Integer> entry : mappa.entrySet()) {
-            if (entry.getValue().equals(maxSize)) {
-                winner = entry.getKey();
-            }
+        return longest;
+    }
+
+    private static String findPalindrome(String input, int start, int end) {
+
+        while (start >= 0 && end <= input.length() - 1 && input.charAt(start) == input.charAt(end)) {
+            start--;
+            end++;
         }
-        System.out.println(winner);
-        System.out.println(maxSize);
+        return input.substring(start + 1, end);
+
     }
 }

@@ -37,13 +37,13 @@ public class CountWords {
 
         for (int i = 0; i < input.length(); i++) {
             // If next character is a separator, set the
-            // state as OUT
+            // state to false
             if (input.charAt(i) == ' ')
                 state = false;
 
 
                 // If next character is not a word separator
-                // and state is OUT, then set the state as IN
+                // and state is false, then set the state as IN
                 // and increment word count
             else if (state == false) {
                 state = true;
