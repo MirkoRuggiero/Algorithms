@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 public class Palindrome {
 
-    private static Function<String, Boolean> isPalindrome = s -> {
+    public static Function<String, Boolean> isPalindrome = s -> {
 
         char[] array = new char[s.length()];
 
@@ -23,7 +23,7 @@ public class Palindrome {
 
     public static void main(String[] args) {
 
-        String string = "itopinonavevanonipoti";
+        String string = "eleimettalattemieleeleimettalattemieleeleimettalattemieleeleimettalattemiele";
 
         if (isPalindrome.apply(string)) {
             System.out.println("OK");
