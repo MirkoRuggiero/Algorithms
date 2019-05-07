@@ -1,4 +1,4 @@
-package algorithms.interview;
+package algorithms.exercises.tw;
 
 import java.util.Objects;
 

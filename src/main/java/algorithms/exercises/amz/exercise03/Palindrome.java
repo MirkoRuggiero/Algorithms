@@ -1,4 +1,4 @@
-package algorithms.exercises.exercise03;
+package algorithms.exercises.amz.exercise03;
 
 import java.util.function.Function;
 

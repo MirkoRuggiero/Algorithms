@@ -1,6 +1,4 @@
-package algorithms.exercises.exercise04;
-
-import java.util.HashMap;
+package algorithms.exercises.amz.exercise04;
 
 public class Exponential {
 

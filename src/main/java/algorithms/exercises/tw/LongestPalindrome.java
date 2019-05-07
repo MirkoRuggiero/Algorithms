@@ -1,6 +1,8 @@
-package algorithms.interview;
+package algorithms.exercises.tw;
 
-public class LongestPalindrome {//TODO
+import java.util.Objects;
+
+public class LongestPalindrome {
 
     public static void main(String[] args) {
         LongestPalindrome lp = new LongestPalindrome();
@@ -15,6 +17,14 @@ public class LongestPalindrome {//TODO
     }
 
     private String getLongestPalindrome(String input) {
+
+        if (Objects.isNull(input) || input.isEmpty()) {
+            throw new RuntimeException();
+        }
+
+        if (input.length() == 1) {
+            return input;
+        }
         String longest = String.valueOf(input.charAt(0));
 
         for (int i = 0; i < input.length(); i++) {

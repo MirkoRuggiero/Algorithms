@@ -1,4 +1,4 @@
-package algorithms.interview;
+package algorithms.exercises.tw;
 
 public class WhitespaceCounter {
     public static void main(String[] args) {
@@ -8,8 +8,8 @@ public class WhitespaceCounter {
 
         int res = 0;
 
-        for (int i = 0; i<input.length(); i++) {
-            if (input.charAt(i) == ' ' || input.charAt(i) == '\n'){
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == ' ' || input.charAt(i) == '\n') {
                 res++;
             }
         }

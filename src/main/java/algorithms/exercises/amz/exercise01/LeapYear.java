@@ -1,4 +1,4 @@
-package algorithms.exercises.exercise01;
+package algorithms.exercises.amz.exercise01;
 
 import java.util.GregorianCalendar;
 import java.util.function.Function;

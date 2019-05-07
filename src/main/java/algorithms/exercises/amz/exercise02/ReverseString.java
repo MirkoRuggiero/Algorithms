@@ -1,4 +1,4 @@
-package algorithms.exercises.exercise02;
+package algorithms.exercises.amz.exercise02;
 
 import java.util.Arrays;
 import java.util.List;

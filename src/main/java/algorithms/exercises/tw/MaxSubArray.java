@@ -1,4 +1,4 @@
-package algorithms.interview;
+package algorithms.exercises.tw;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ public class MaxSubArray {
 
     public static void main(String[] args) {
         int[] input1 = {7, -2, 7, 5};
-        int[] input2 = {10000, -999,7, -9, 7, 5};
-        int[] input3 = {-999,7, -9, 7, 5};
+        int[] input2 = {10000, -999, 7, -9, 7, 5};
+        int[] input3 = {-999, 7, -9, 7, 5};
 
         System.out.println(maxSum(input1));
         System.out.println(indexes);
