@@ -1,12 +1,8 @@
 package algorithms.exercises.batch1.exercise04;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Exponential {
 
     public static void main(String[] args) {
-        Map<Integer, Integer> errors = new HashMap<>();
 
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 100; j++) {
@@ -15,16 +11,7 @@ public class Exponential {
                 System.out.println("Iterative: " + i + " " + j + "=" + it);
                 System.out.println("Recursive: " + i + " " + j + "=" + rec);
                 System.out.println("\n");
-                if (it != rec) {
-                    errors.put(i, j);
-                }
             }
-        }
-        if (!errors.isEmpty()) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("Errors have been found for \n");
-            errors.forEach((base, exp) -> sb.append(base).append(" to the power of ").append(exp).append("\n"));
-            System.out.println(sb);
         }
     }
 

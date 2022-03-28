@@ -1,7 +1,5 @@
 package algorithms.exercises.batch2;
 
-import java.util.Objects;
-
 public class LongestPalindrome {
 
     public static void main(String[] args) {
@@ -18,10 +16,9 @@ public class LongestPalindrome {
 
     private String getLongestPalindrome(String input) {
 
-        if (Objects.isNull(input) || input.isEmpty()) {
-            throw new RuntimeException();
+        if (input.isEmpty()) {
+            return input;
         }
-
         if (input.length() == 1) {
             return input;
         }
