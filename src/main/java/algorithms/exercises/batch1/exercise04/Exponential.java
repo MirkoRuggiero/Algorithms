@@ -31,6 +31,7 @@ public class Exponential {
     private static double iterativePower(int base, int exp) {
 
         if (exp == 0) return 1;
+        if (base == 1) return 1;
 
         double result = 1.0;
         if (exp < 0) {
@@ -55,6 +56,7 @@ public class Exponential {
     private static double recursivePower(int base, int exp) {
 
         if (exp == 0) return 1;
+        if (base == 1) return 1;
 
         if (exp < 0) {
             //negative
