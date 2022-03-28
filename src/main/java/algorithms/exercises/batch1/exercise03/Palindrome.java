@@ -1,10 +1,8 @@
-package algorithms.exercises.amz.exercise03;
-
-import java.util.function.Function;
+package algorithms.exercises.batch1.exercise03;
 
 public class Palindrome {
 
-    public static Function<String, Boolean> isPalindrome = s -> {
+    private static boolean isPalindrome(String s) {
 
         char[] array = new char[s.length()];
 
@@ -19,13 +17,13 @@ public class Palindrome {
         }
 
         return true;
-    };
+    }
 
     public static void main(String[] args) {
 
         String string = "eleimettalattemieleeleimettalattemieleeleimettalattemieleeleimettalattemiele";
 
-        if (isPalindrome.apply(string)) {
+        if (isPalindrome(string)) {
             System.out.println("OK");
         }
     }

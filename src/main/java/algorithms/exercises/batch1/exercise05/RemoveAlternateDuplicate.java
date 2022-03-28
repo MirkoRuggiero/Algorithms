@@ -1,4 +1,4 @@
-package algorithms.exercises.amz.exercise05;
+package algorithms.exercises.batch1.exercise05;
 
 import java.util.HashSet;
 import java.util.Set;

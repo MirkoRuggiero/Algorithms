@@ -1,4 +1,4 @@
-package algorithms.exercises.tw;
+package algorithms.exercises.batch2;
 
 public class WhitespaceCounter {
     public static void main(String[] args) {

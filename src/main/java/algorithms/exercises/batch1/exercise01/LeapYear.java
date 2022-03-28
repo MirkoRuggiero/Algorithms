@@ -1,4 +1,4 @@
-package algorithms.exercises.amz.exercise01;
+package algorithms.exercises.batch1.exercise01;
 
 import java.util.GregorianCalendar;
 import java.util.function.Function;
@@ -12,32 +12,21 @@ import java.util.function.Function;
  * gli anni secolari il cui numero è divisibile per 400.
  */
 public class LeapYear {
-    /**
-     * Functional approach to test if a year is a Leap Year
-     */
-    private static final Function<Integer, Boolean> isLeap = y -> (y % 400 == 0) || (y % 100 != 0 && y % 4 == 0);
 
-    /**
-     * Iterative approach
-     *
-     * @param year
-     * @return
-     */
     private static boolean isLeap(int year) {
         if (year % 4 != 0) return false;
         if (year % 100 != 0) return true;
-        if (year % 400 != 0) return false;
-        return true;
+        return year % 400 == 0;
     }
 
     public static void main(String[] args) {
 
-        int year = 1581;
+        int year = 0;
 
         while (year < 100000) {
             GregorianCalendar gc = new GregorianCalendar();
-            if (gc.isLeapYear(year) != isLeap(year) || gc.isLeapYear(year) != isLeap.apply(year))
-                throw new RuntimeException();
+            if (gc.isLeapYear(year) && isLeap(year) )
+                throw new RuntimeException("Error with year " + year);
             year++;
         }
     }
