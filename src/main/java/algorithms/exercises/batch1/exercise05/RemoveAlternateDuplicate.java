@@ -1,13 +1,14 @@
 package algorithms.exercises.batch1.exercise05;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class RemoveAlternateDuplicate {
     public static void main(String[] args) {
 
-        String input = "you got beautiful eyes";
-        String expectedOutput = "you gt beaifl s";
+        String input = " aAAAAAAAAAAAAAAAAaaeEEEEEEEioooiuuuuuuuuuuuuuyyyyyyyyyyy apples trees bumblebees";
+        String expectedOutput = " aAeEiouy pls tr bm";
 
         System.out.println(removeDuplicate(input));
         System.out.println(expectedOutput);
@@ -23,19 +24,21 @@ public class RemoveAlternateDuplicate {
 
         Set<Character> set = new HashSet<>();
         int oIdx = 0;
-        for (int i = 0; i < input.length; i++) {
-            if (input[i] == ' ') {
-                output[oIdx] = input[i];
+        for (char c : input) {
+            //spaces remain unchanged
+            if (c == ' ') {
+                output[oIdx] = c;
                 oIdx++;
                 continue;
             }
-            if (!set.contains(input[i])) {
-                set.add(input[i]);
-                output[oIdx] = input[i];
+            if (!set.contains(c)) {
+                set.add(c);
+                output[oIdx] = c;
                 oIdx++;
             }
-
+            //do not increment oIdx if duplicate is found
         }
-        return String.valueOf(output);
+
+        return String.valueOf(Arrays.copyOfRange(output, 0, oIdx));
     }
 }
